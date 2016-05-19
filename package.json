@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["twitter", "elasticsearch"],
   "author": "lightbulbcat@icloud.com",
   "license": "ISC",
   "devDependencies": {
@@ -22,5 +22,5 @@
     "url": "https://github.com/LightbulbCat/twitter-es-api-practice/issues"
   },
   "homepage": "https://github.com/LightbulbCat/twitter-es-api-practice#readme",
-  "description": ""
+  "description": "A practice project for hands-on of twitter and elasticsearch API"
 }
