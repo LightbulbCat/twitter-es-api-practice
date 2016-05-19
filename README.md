@@ -1,6 +1,6 @@
 # twitter-es-api-practice
 
-A small sample to use twitter and elasticsearch API
+A small exsample to use twitter and elasticsearch API
 
 ## Usage
 ### Download
