@@ -1,0 +1,12 @@
+{
+  "twitter" : {
+    "consumer_key" : "xxxxxxxxxxxxxxxx",
+    "consumer_secret" : "xxxxxxxxxxxxxxxx",
+    "access_token_key" : "xxxxxxxxxxxxxxxx",
+    "access_token_secret" : "xxxxxxxxxxxxxxxx"
+  },
+  "elasticsearch" : {
+    "host" : "localhost:9200/",
+    "auth" : ""
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "twitter-es-api-practice",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "lightbulbcat@icloud.com",
+  "license": "ISC",
+  "devDependencies": {
+    "elasticsearch": "^11.0.1",
+    "jsonfile": "^2.3.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightbulbCat/twitter-es-api-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LightbulbCat/twitter-es-api-practice/issues"
+  },
+  "homepage": "https://github.com/LightbulbCat/twitter-es-api-practice#readme",
+  "description": ""
+}
