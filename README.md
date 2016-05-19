@@ -7,6 +7,7 @@ A small exsample to use twitter and elasticsearch API
 ```
 git clone https://github.com/LightbulbCat/twitter-es-api-practice
 cd twitter-es-api-practice
+npm install
 ```
 
 ### config
