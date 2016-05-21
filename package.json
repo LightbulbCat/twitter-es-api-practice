@@ -5,7 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["twitter", "elasticsearch"],
+  "keywords": [
+    "twitter",
+    "elasticsearch"
+  ],
   "author": "lightbulbcat@icloud.com",
   "license": "ISC",
   "devDependencies": {
