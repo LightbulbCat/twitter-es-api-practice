@@ -22,28 +22,35 @@ const promised_getTweet = function (params) {
 const elasticsearch = require('elasticsearch');
 const es_client = elasticsearch.Client(config.elasticsearch);
 
+// co for async process
+
+const co = require('co');
+
 // send queries
 
 // before this, elasticsearch should be have a index 'twitter'.
 // to make it, ex) curl -XPUT localhost:9200/twitter/
 
-const params = {screen_name: 'LightbulbCat'};
-promised_getTweet(params)
+co (function *() {
 
-  .then( function(tweets) {
-    console.log(tweets);
+  const params = {screen_name: 'LightbulbCat'};
+  const tweets = yield promised_getTweet(params)
 
-    for(let tweet of tweets) {
-      es_client.index({
-        index: 'twitter',
-        type: 'defalut',
-        id: tweet.id,
-        body: tweet,
-      });
-    }
-  })
+    .catch( function(error) {
+      console.log('tw_client error:', error);
+      return;
+    })
 
-  .catch( function(error) {
-    console.log('tw_client error:', error);
-    return;
-  })
+  console.log(tweets);
+
+  for (let tweet of tweets) {
+    const result = yield es_client.index({
+      index: 'twitter',
+      type: 'defalut',
+      id: tweet.id,
+      body: tweet,
+    })
+
+    console.log(result);
+  }
+}); // end of co
