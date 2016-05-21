@@ -16,7 +16,7 @@ const es_client = elasticsearch.Client(config.elasticsearch);
 // send queries
 
 // before this, elasticsearch should be have a index 'twitter'.
-// to make it, ex) curl -XPUT localhost:9200/twitter/
+// For example to make it, do `curl -XPUT localhost:9200/twitter/``
 
 const params = {screen_name: 'LightbulbCat'};
 tw_client.get('statuses/user_timeline', params, function(error, tweets, response){
