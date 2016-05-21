@@ -32,8 +32,8 @@ tw_client.get('statuses/user_timeline', params, function(error, tweets, response
     es_client.index({
       index: 'twitter',
       type: 'defalut',
-      id: tweets[0].id,
-      body: tweets[0]
+      id: tweet.id,
+      body: tweet,
     });
   }
 });
