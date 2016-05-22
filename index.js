@@ -10,9 +10,6 @@ const config = jsonfile.readFileSync('config.json');
 const Twitter = require('twitter');
 const tw_client = new Twitter(config.twitter);
 
-const elasticsearch = require('elasticsearch');
-const es_client = elasticsearch.Client(config.elasticsearch);
-
 // send queries
 
 // before this, elasticsearch should be have a index 'twitter'.
@@ -28,12 +25,4 @@ tw_client.get('statuses/user_timeline', params, function(error, tweets, response
 
   console.log(tweets);
 
-  for(let tweet of tweets) {
-    es_client.index({
-      index: 'twitter',
-      type: 'defalut',
-      id: tweet.id,
-      body: tweet,
-    });
-  }
 });
