@@ -10,7 +10,7 @@ const config = jsonfile.readFileSync('config.json');
 const Twitter = require('twitter');
 const tw_client = new Twitter(config.twitter);
 
-const promised_getTweet = function (params) {
+const promised_getTweets = function (params) {
   return new Promise( function(resolve, reject) {
     tw_client.get('statuses/user_timeline', params, function(error, tweets, response){
       if (error) reject (error);
@@ -34,7 +34,7 @@ const co = require('co');
 co (function* () {
 
   const params = {screen_name: 'LightbulbCat'};
-  const tweets = yield promised_getTweet(params)
+  const tweets = yield promised_getTweets(params)
 
     .catch( function(error) {
       console.log('tw_client error:', error);
