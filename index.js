@@ -31,7 +31,7 @@ const co = require('co');
 // before this, elasticsearch should be have a index 'twitter'.
 // to make it, ex) curl -XPUT localhost:9200/twitter/
 
-co (function *() {
+co (function* () {
 
   const params = {screen_name: 'LightbulbCat'};
   const tweets = yield promised_getTweet(params)
