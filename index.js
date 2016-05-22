@@ -18,11 +18,10 @@ const tw_client = new Twitter(config.twitter);
 const params = {screen_name: 'LightbulbCat'};
 tw_client.get('statuses/user_timeline', params, function(error, tweets, response){
 
-  if (error) {
-    console.log('tw_client error:', error);
-    return;
-  }
+  console.log('tw_client error:', error);
+  console.log('tw_client tweets:', tweets);
 
-  console.log(tweets);
+  // "response" contains so much, if you wont to be shown, comment out!
+  //console.log('tw_client response:', response);
 
 });
